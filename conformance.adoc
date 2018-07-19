@@ -350,16 +350,12 @@ default mixed Gregorian/Julian calendar is in use.
 *Requirements:*
 
 [horizontal]
-*5.requirement.1*:: All of a variable's dimensions that are latitude, longitude, vertical,
-or time dimensions must have corresponding coordinate variables.
-*5.requirement.2*::  A coordinate variable must have values that are strictly monotonic
-(increasing or decreasing).
-*5.requirement.3*::  A coordinate variable must not have the **`_FillValue`** or **`missing_value`**
-attributes.
-*5.requirement.4*::  The type of the **`coordinates`** attribute is a string whose value is a
-blank separated list of variable names. All specified variable names
-must exist in the file.
-*5.requirement.5*::  The dimensions of each auxiliary coordinate must be a subset of the dimensions of the variable they are attached to, with two exceptions. First, a label variable which will have a trailing dimension for the maximum string length. Second a ragged array (Chapter 9, Discrete sampling geometries and Appendix H) uses special, more indirect, methods to connect the data and coordinates. 
+*5.requirement.1*:: All of a variable's dimensions that are latitude, longitude, vertical, or time dimensions must have corresponding coordinate variables.
+*5.requirement.2*::  A coordinate variable must have values that are strictly monotonic (increasing or decreasing).
+*5.requirement.3*::  A coordinate variable must not have the **`_FillValue`** or **`missing_value`** attributes.
+*5.requirement.4*::  The type of the **`coordinates`** attribute is a string whose value is a blank separated list of variable names.
+*5.requirement.5*::  All specified variable names must exist in the file.
+*5.requirement.6*::  The dimensions of each auxiliary coordinate must be a subset of the dimensions of the variable they are attached to, with two exceptions. First, a label variable which will have a trailing dimension for the maximum string length. Second a ragged array (Chapter 9, Discrete sampling geometries and Appendix H) uses special, more indirect, methods to connect the data and coordinates. 
 
 *Recommendations:*
 
@@ -384,14 +380,12 @@ the following form, in which brackets indicate optional text:
 grid_mapping_name[: coord_var [coord_var ...]] [grid_mapping_name: [coord_var ... ]]
 ....
 Note that in its simplest form the attribute comprises just a grid_mapping_name as a single word.
-*5.6.requirement.2*:: Each grid_mapping_name is the name of a variable (known as a grid mapping variable), which must
-exist in the file.
-*5.6.requirement.3*:: Each coord_var is the name of a coordinate variable or auxiliary coordinate variable, which must 
-exist in the file. If it is an auxiliary coordinate variable, it must be listed in the coordinates attribute.
+*5.6.requirement.2*:: Each grid_mapping_name is the name of a variable (known as a grid mapping variable), which must exist in the file.
+*5.6.requirement.3*:: Each coord_var is the name of a coordinate variable or auxiliary coordinate variable, which must exist in the file.
+If it is an auxiliary coordinate variable, it must be listed in the coordinates attribute.
 *5.6.requirement.4*:: The grid mapping variables must have the **`grid_mapping_name`** attribute.
-The legal values for the **`grid_mapping_name`** attribute are contained in
-Appendix F.
-*5.6.requirement.5*:: The data types of the attributes of the grid mapping variable must be specified in Table 1 of Appendix F. +
+The legal values for the **`grid_mapping_name`** attribute are contained in Appendix F.
+*5.6.requirement.5*:: The data types of the attributes of the grid mapping variable must be specified in Table 1 of Appendix F.
 *5.6.requirement.6*:: If present, the **`crs_wkt`** attribute must be a text string conforming to the CRS WKT specification described in reference [OGC_CTS].
 *5.6.requirement.7*:: **`reference_ellipsoid_name`**, **`prime_meridian_name`**, **`horizontal_datum_name`** and 
 **`geographic_crs_name`** must be all defined if any one is defined.
