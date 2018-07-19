@@ -363,6 +363,7 @@ must exist in the file.
 
 *Recommendations:*
 
+[horizontal]
 *5.recommendation.1*:: The name of a multidimensional coordinate variable should not match the name of any of its dimensions.
 *5.recommendation.2*:: All horizontal coordinate variables (in the Unidata sense) should have an **`axis`** attribute.
 *5.recommendation.3*:: All horizontal coordinate variables (in the unidata sense) should have an **`axis`** attribute.
