@@ -20,7 +20,7 @@ material required for completeness or clarity.
 
 *Requirements:*
 
-*2.1e1* * Filename must have ".nc" suffix.
+*2.1e1* Filename must have ".nc" suffix.
 
 [[section]]
 
@@ -29,7 +29,7 @@ material required for completeness or clarity.
 
 *Requirements:*
 
-*2.2e1* * CF attributes that take string values must be 1D character arrays.
+*2.2e1* CF attributes that take string values must be 1D character arrays.
 
 [[section-1]]
 
@@ -38,12 +38,12 @@ material required for completeness or clarity.
 
 *Requirements:*
 
-* Variable, dimension and attribute names must begin with a letter and
+* 2.3e1 Variable, dimension and attribute names must begin with a letter and
 be composed of letters, digits, and underscores.
 
 *Recommendations:*
 
-* No two variable names should be identical when case is ignored.
+* 2.3w1 No two variable names should be identical when case is ignored.
 
 [[section-2]]
 
@@ -52,16 +52,16 @@ be composed of letters, digits, and underscores.
 
 *Requirements:*
 
-* The dimensions of a variable must all have different names.
+2.4e1 The dimensions of a variable must all have different names.
 
 *Recommendations:*
 
-* If any or all of the dimensions of a variable have the interpretations
+* *2.4w1* If any or all of the dimensions of a variable have the interpretations
 (as given by their units or axis attribute) of time (T), height or depth
 (Z), latitude (Y), or longitude (X) then those dimensions should appear
 in the relative order T, then Z, then Y, then X in the CDL definition
 corresponding to the file.
-* In files that are meant to conform to the COARDS subset of CF, any
+* *2.4w2* In files that are meant to conform to the COARDS subset of CF, any
 dimensions of a variable other than space and time dimensions should be
 added "to the left" of the space and time dimensions as represented in
 CDL.
