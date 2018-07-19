@@ -80,30 +80,30 @@ CDL.
 *Requirements:*
 
 [horizontal]
-*2.5.1.recommendation1*:: The **`valid_range`** attribute must not be present if the **`valid_min`** and/or
+*2.5.1.recommendation.1*:: The **`valid_range`** attribute must not be present if the **`valid_min`** and/or
 **`valid_max`** attributes are present.
-*2.5.1.recommendation2*:: The **`_FillValue`** attribute must be the same type as its associated
+*2.5.1.recommendation.2*:: The **`_FillValue`** attribute must be the same type as its associated
 variable.
-*2.5.1.recommendation3*:: The **`missing_value`** attribute must be the same type as its associated
+*2.5.1.recommendation.3*:: The **`missing_value`** attribute must be the same type as its associated
 variable.
-*2.5.1.recommendation4*:: The **`actual_range`** attribute must be of the same type as its associated
+*2.5.1.recommendation.4*:: The **`actual_range`** attribute must be of the same type as its associated
 variable unless there is a **`scale_factor`** and/or **`add_offset`** attribute, in
 which case it must be of the same type as those attributes.
-*2.5.1.recommendation5*:: The **`actual_range`** attribute must have two elements, of which the first
+*2.5.1.recommendation.5*:: The **`actual_range`** attribute must have two elements, of which the first
 exactly equals the minimum non-missing value occurring in the associated
 variable after any **`scale_factor`** and **`add_offset`** are applied, and the
 second exactly equals the maximum value in the same way.
-*2.5.1.recommendation6*:: There must not be an **`actual_range`** attribute if all the data values of
+*2.5.1.recommendation.6*:: There must not be an **`actual_range`** attribute if all the data values of
 the associated variable equal the missing value.
-*2.5.1.recommendation7*:: If both the **`actual_range`** and **`valid_range/valid_min/valid_max`** are
+*2.5.1.recommendation.7*:: If both the **`actual_range`** and **`valid_range/valid_min/valid_max`** are
 specified, the values of the **`actual_range`** must be valid values.
 
 *Recommendations:*
 
 [horizontal]
-*2.5.1recommendation1*:: The value of the **`_FillValue`** attribute should not be within a specified
+*2.5.1.recommendation.1*:: The value of the **`_FillValue`** attribute should not be within a specified
 valid range.
-*2.5.1recommendation2*:: If both **`missing_value`** and **`_FillValue`** be used, they should have the
+*2.5.1.recommendation.2*:: If both **`missing_value`** and **`_FillValue`** be used, they should have the
 same value.
 
 [[section-4]]
