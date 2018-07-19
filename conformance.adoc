@@ -20,7 +20,7 @@ material required for completeness or clarity.
 
 *Requirements:*
 
-*2.1e1* Filename must have ".nc" suffix.
+*2.1e1* * Filename must have ".nc" suffix.
 
 [[section]]
 
@@ -29,7 +29,7 @@ material required for completeness or clarity.
 
 *Requirements:*
 
-*2.2e1* CF attributes that take string values must be 1D character arrays.
+*2.2e1* * CF attributes that take string values must be 1D character arrays.
 
 [[section-1]]
 
