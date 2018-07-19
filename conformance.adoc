@@ -470,13 +470,6 @@ associated boundary variable.
 *7.2.requirement.2*:: The valid values for **`measure`** are **`area`** or **`volume`**.
 *7.2.requirement.3*:: The **`var`** token specifies a variable that must either exist in the file or be named by the **`external_variables`** attribute.
 *7.2.requirement.4*:: The dimensions of the variable specified by **`var`** must be the same as, or be a subset of, the dimensions of the variable to which they are related.
-*7.2.requirement.X*:: The type of the **`cell_measures`** attribute is a string whose value is
-list of blank separated word pairs in the form **`measure: var`**. The valid
-values for **`measure`** are **`area`** or **`volume`**. The **`var`** token specifies a
-variable that must either exist in the file or be named by the **`external_variables`**
-attribute. The dimensions of the variable
-specified by **`var`** must be the same as, or be a subset of, the dimensions
-of the variable to which they are related.
 *7.2.requirement.5*:: A measure variable must have units that are consistent with the measure type, i.e., square meters for area measures and cubic meters for volume measures.
 
 [[section-19]]
