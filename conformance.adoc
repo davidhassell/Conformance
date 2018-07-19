@@ -95,9 +95,9 @@ specified, the values of the **`actual_range`** must be valid values.
 *Recommendations:*
 
 In::
-*2.5.1w1*:: The value of the **`_FillValue`** attribute should not be within a specified
+2.5.1w1:: The value of the **`_FillValue`** attribute should not be within a specified
 valid range.
-*2.5.1w2*:: If both **`missing_value`** and **`_FillValue`** be used, they should have the
+2.5.1w2:: If both **`missing_value`** and **`_FillValue`** be used, they should have the
 same value.
 
 [[section-4]]
