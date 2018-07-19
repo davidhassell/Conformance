@@ -54,6 +54,11 @@ be composed of letters, digits, and underscores.
 
 * *[2.4e1]* The dimensions of a variable must all have different names.
 
+[*2.4e1*]
+====
+The dimensions of a variable must all have different names.
+====
+
 *Recommendations:*
 
 [horizontal]
