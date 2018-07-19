@@ -56,15 +56,15 @@ be composed of letters, digits, and underscores.
 
 *Recommendations:*
 
-* *[2.4w1]* If any or all of the dimensions of a variable have the interpretations
+* If any or all of the dimensions of a variable have the interpretations
 (as given by their units or axis attribute) of time (T), height or depth
 (Z), latitude (Y), or longitude (X) then those dimensions should appear
 in the relative order T, then Z, then Y, then X in the CDL definition
-corresponding to the file.
-* *[2.4w2]* In files that are meant to conform to the COARDS subset of CF, any
+corresponding to the file. *[2.4w1]* 
+* In files that are meant to conform to the COARDS subset of CF, any
 dimensions of a variable other than space and time dimensions should be
 added "to the left" of the space and time dimensions as represented in
-CDL.
+CDL. *[2.4w2]* 
 
 [[section-3]]
 
