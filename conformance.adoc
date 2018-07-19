@@ -349,30 +349,23 @@ default mixed Gregorian/Julian calendar is in use.
 
 *Requirements:*
 
-* All of a variable's dimensions that are latitude, longitude, vertical,
+[horizontal]
+*5.requirement.1*:: All of a variable's dimensions that are latitude, longitude, vertical,
 or time dimensions must have corresponding coordinate variables.
-* A coordinate variable must have values that are strictly monotonic
+*5.requirement.2*::  A coordinate variable must have values that are strictly monotonic
 (increasing or decreasing).
-* A coordinate variable must not have the **`_FillValue`** or **`missing_value`**
+*5.requirement.3*::  A coordinate variable must not have the **`_FillValue`** or **`missing_value`**
 attributes.
-* The type of the **`coordinates`** attribute is a string whose value is a
+*5.requirement.4*::  The type of the **`coordinates`** attribute is a string whose value is a
 blank separated list of variable names. All specified variable names
 must exist in the file.
-* The dimensions of each auxiliary coordinate must be a subset of the
-dimensions of the variable they are attached to, with two exceptions.
-First, a label variable which will have a trailing dimension for the
-maximum string length. Second a ragged array (Chapter 9, Discrete
-sampling geometries and Appendix H) uses special, more indirect, methods
-to connect the data and coordinates. +
+*5.requirement.5*::  The dimensions of each auxiliary coordinate must be a subset of the dimensions of the variable they are attached to, with two exceptions. First, a label variable which will have a trailing dimension for the maximum string length. Second a ragged array (Chapter 9, Discrete sampling geometries and Appendix H) uses special, more indirect, methods to connect the data and coordinates. +
 
 *Recommendations:*
 
-* The name of a multidimensional coordinate variable should not match
-the name of any of its dimensions.
-* All horizontal coordinate variables (in the Unidata sense) should have
-an **`axis`** attribute.
-* All horizontal coordinate variables (in the unidata sense) should have
-an **`axis`** attribute.
+*5.recommendation.1*:: The name of a multidimensional coordinate variable should not match the name of any of its dimensions.
+*5.recommendation.2*:: All horizontal coordinate variables (in the Unidata sense) should have an **`axis`** attribute.
+*5.recommendation.3*:: All horizontal coordinate variables (in the unidata sense) should have an **`axis`** attribute.
 
 [[section-16]]
 
