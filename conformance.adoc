@@ -473,7 +473,7 @@ variable that must either exist in the file or be named by the **`external_varia
 attribute. The dimensions of the variable
 specified by **`var`** must be the same as, or be a subset of, the dimensions
 of the variable to which they are related.
-*7.2.requirement.2*:::: A measure variable must have units that are consistent with the
+*7.2.requirement.2*::: A measure variable must have units that are consistent with the
 measure type, i.e., square meters for area measures and cubic meters for
 volume measures.
 
