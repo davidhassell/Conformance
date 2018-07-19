@@ -29,8 +29,7 @@ material required for completeness or clarity.
 
 *Requirements:*
 
-[horizontal]
-[width="100%"]
+[horizontal width="100%"]
 *2.2e1*:: CF attributes that take string values must be 1D character arrays.
 
 [[section-1]]
