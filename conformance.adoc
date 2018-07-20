@@ -113,12 +113,9 @@ same value.
 
 *Requirements:*
 
-* Files that conform to the CF version 1.7 conventions must indicate
-this by setting the global **`Conventions`** attribute to the string value
-"CF-1.7".
-* The **`Conventions`** attribute may be a single text string containing a list 
-of convention names separated by blank space or commas, one of which shall 
-be the full CF string as described above.
+[horizontal]
+*2.6.1.requirement.1*:: Files that conform to the CF version 1.7 conventions must indicate this by setting the global **`Conventions`** attribute to the string value "CF-1.7".
+*2.6.1.requirement.2*:: The **`Conventions`** attribute may be a single text string containing a list of convention names separated by blank space or commas, one of which shall be the full CF string as described above.
 
 [[section-5]]
 
@@ -127,23 +124,21 @@ be the full CF string as described above.
 
 *Requirements:*
 
-* The **`title`**, **`history`**, **`institution`**, **`source`**, **`references`**, and **`comment`**
-attributes are all type string.
+[horizontal]
+*2.6.2.requirement.1*:: The **`title`**, **`history`**, **`institution`**, **`source`**, **`references`**, and **`comment`** attributes are all type string.
 
 *Recommendations:*
 
-* The **`title`** and **`history`** attributes are only defined as global
-attributes. If they are used as per variable attributes a CF compliant
-application should treat them exactly as it would treat any other
-unrecognized attribute.
+[horizontal]
+*2.6.2.recommendation.1*::  The **`title`** and **`history`** attributes are only defined as global attributes. If they are used as per variable attributes a CF compliant application should treat them exactly as it would treat any other unrecognized attribute.
 
 === 2.6.3 External variables
 
 *Requirements:*
 
-* The **`external_variables`** attribute is of string type and contains a blank-separated 
-list of variable names.
-* No variable named by **`external_variables`** is allowed in the file.
+[horizontal]
+*2.6.3.requirement.1*:: The **`external_variables`** attribute is of string type and contains a blank-separated list of variable names.
+*2.6.3.requirement.2*:: No variable named by **`external_variables`** is allowed in the file.
 
 
 [[section-6]]
@@ -153,6 +148,7 @@ list of variable names.
 
 *Recommendations:*
 
+[horizontal]
 * All variables should use either the **`long_name`** or the **`standard_name`**
 attributes to describe their contents. Exceptions are boundary and
 climatology variables.
@@ -164,25 +160,16 @@ climatology variables.
 
 *Requirements:*
 
-* The **`units`** attribute is required for all variables that represent
-dimensional quantities (except for boundary variables defined in
-http://cfconventions.org/cf-conventions/cf-conventions.html#cell-boundaries[section 7.1]
-and climatology variables defined in
-http://cfconventions.org/cf-conventions/cf-conventions.html#climatological-statistics[section 7.4]
-).
-* The type of the **`units`** attribute is a string that must be recognizable
-by the udunits package. Exceptions are the units **`level, layer, and
-sigma_level`**.
-* The **`units`** of a variable that specifies a **`standard_name`** must be
-physically equivalent to the canonical units given in the standard name
-table, as modified by the **`standard_name`** modifier, if there is one,
-according to Appendix C, and then modified by all the methods listed in
-order by the **`cell_methods`** attribute, if one is present, according to
-Appendix E.
+[horizontal]
+*3.1.requirement.1*:: The **`units`** attribute is required for all variables that represent dimensional quantities (except for boundary variables defined in http://cfconventions.org/cf-conventions/cf-conventions.html#cell-boundaries[section 7.1]
+and climatology variables defined in http://cfconventions.org/cf-conventions/cf-conventions.html#climatological-statistics[section 7.4]).
+*3.1.requirement.2*:: The type of the **`units`** attribute is a string that must be recognizable by the udunits package. Exceptions are the units **`level, layer, and sigma_level`**.
+*3.1.requirement.3*:: The **`units`** of a variable that specifies a **`standard_name`** must be physically equivalent to the canonical units given in the standard name table, as modified by the **`standard_name`** modifier, if there is one, according to Appendix C, and then modified by all the methods listed in order by the **`cell_methods`** attribute, if one is present, according to Appendix E.
 
 *Recommendations:*
 
-* The units **`level`**, **`layer`**, and **`sigma_level`** are deprecated.
+[horizontal]
+*3.1.recommendation.1*:: The units **`level`**, **`layer`**, and **`sigma_level`** are deprecated.
 
 [[section-8]]
 
