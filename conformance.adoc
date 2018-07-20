@@ -322,25 +322,18 @@ caution.
 
 *Requirements:*
 
-* The attributes **`calendar`**, **`month_lengths`**, **`leap_year`**, and **`leap_month`** may
-only be attached to time coordinate variables.
-* The standardized values of the calendar attribute are **`gregorian`**,
-**`standard`**, **`proleptic_gregorian`**, **`noleap`**, **`365_day`**, **`all_leap`**, **`366_day`**,
-**`360_day`**, **`julian`**, and **`none`** (case insensitive). If the **`calendar`** attribute
-is given a non-standard value, then the attribute **`month_lengths`** is
-required, along with **`leap_year`** and **`leap_month`** as appropriate.
-* The type of the **`month_lengths`** attribute must be an integer array of
-size 12.
-* The values of the **`leap_month`** attribute must be in the range 1-12.
-* The values of the **`leap_year`** and **`leap_month`** attributes are integer
-scalars.
+[horizontal]
+*4.4.1.requirement.1*:: The attributes **`calendar`**, **`month_lengths`**, **`leap_year`**, and **`leap_month`** may only be attached to time coordinate variables.
+*4.4.1.requirement.2*:: The standardized values of the calendar attribute are **`gregorian`**, **`standard`**, **`proleptic_gregorian`**, **`noleap`**, **`365_day`**, **`all_leap`**, **`366_day`**, **`360_day`**, **`julian`**, and **`none`** (case insensitive). If the **`calendar`** attribute is given a non-standard value, then the attribute **`month_lengths`** is required, along with **`leap_year`** and **`leap_month`** as appropriate.
+*4.4.1.requirement.3*:: The type of the **`month_lengths`** attribute must be an integer array of size 12.
+*4.4.1.requirement.4*:: The values of the **`leap_month`** attribute must be in the range 1-12.
+*4.4.1.requirement.5*:: The values of the **`leap_year`** and **`leap_month`** attributes are integer scalars.
 
 *Recommendations:*
 
-* The attribute **`leap_month`** should not appear unless the attribute
-**`leap_year`** is present.
-* The time coordinate should not cross the date 1582-10-15 when the
-default mixed Gregorian/Julian calendar is in use.
+[horizontal]
+*4.4.1.recommendation.1*:: The attribute **`leap_month`** should not appear unless the attribute **`leap_year`** is present.
+*4.4.1.recommendation.2*:: The time coordinate should not cross the date 1582-10-15 when the default mixed Gregorian/Julian calendar is in use.
 
 [[section-15]]
 
