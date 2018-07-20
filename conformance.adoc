@@ -149,9 +149,7 @@ same value.
 *Recommendations:*
 
 [horizontal]
-* All variables should use either the **`long_name`** or the **`standard_name`**
-attributes to describe their contents. Exceptions are boundary and
-climatology variables.
+*3.recommendation.1*:: All variables should use either the **`long_name`** or the **`standard_name`** attributes to describe their contents. Exceptions are boundary and climatology variables.
 
 [[section-7]]
 
@@ -178,6 +176,7 @@ and climatology variables defined in http://cfconventions.org/cf-conventions/cf-
 
 *Requirements:*
 
+[horizontal]
 * The **`standard_name`** attribute takes a string value comprised of a
 standard name optionally followed by one or more blanks and a standard
 name modifier.
@@ -200,24 +199,24 @@ is deprecated, and the corresponding **`standard_names`** are recommended instea
 
 *Requirements:*
 
-* The **`flag_values`** attribute must have the same type as the variable to
+*3.5.requirement.1*:: The **`flag_values`** attribute must have the same type as the variable to
 which it is attached.
-* If the **`flag_values`** attribute is present then the **`flag_meanings`**
+*3.5.requirement.2*:: If the **`flag_values`** attribute is present then the **`flag_meanings`**
 attribute must be specified.
-* The type of the **`flag_meanings`** attribute is a string whose value is a
+*3.5.requirement.3*:: The type of the **`flag_meanings`** attribute is a string whose value is a
 blank separated list of words or phrases,  each consisting of characters
 from the alphanumeric set and the following five: '_', '-', '.', '+',
 '@'.
-* The number of **`flag_values`** attribute values must equal the number of
+*3.5.requirement.4*:: The number of **`flag_values`** attribute values must equal the number of
 words or phrases appearing in the **`flag_meanings`** string.
-* The number of **`flag_masks`** attribute values must equal the number of
+*3.5.requirement.5*:: The number of **`flag_masks`** attribute values must equal the number of
 words or phrases appearing in the **`flag_meanings`** string.
-* Variables with a **`flag_masks`** attribute must have a type that is
+*3.5.requirement.6*:: Variables with a **`flag_masks`** attribute must have a type that is
 compatible with bit field expression (char, byte, short and int), not
 floating-point (float, real, double), and the **`flag_masks`** attribute must
 have the same type.
-* The **`flag_masks`** attribute values must be non-zero.
-* The **`flag_values`** attribute values must be mutually exclusive among the
+*3.5.requirement.7*:: The **`flag_masks`** attribute values must be non-zero.
+*3.5.requirement.8*:: The **`flag_values`** attribute values must be mutually exclusive among the
 set of **`flag_values`** attribute values defined for that variable.
 
 *Recommendations:*
