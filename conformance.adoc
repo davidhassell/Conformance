@@ -199,6 +199,7 @@ is deprecated, and the corresponding **`standard_names`** are recommended instea
 
 *Requirements:*
 
+[horizontal]
 *3.5.requirement.1*:: The **`flag_values`** attribute must have the same type as the variable to
 which it is attached.
 *3.5.requirement.2*:: If the **`flag_values`** attribute is present then the **`flag_meanings`**
