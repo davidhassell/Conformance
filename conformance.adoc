@@ -234,13 +234,12 @@ required to express the value.
 
 *Requirements:*
 
-* The **`axis`** attribute may only be attached to coordinate variables and geometry node coordinate variables (Chapter 7).
-* The only legal values of axis are **`X`**, **`Y`**, **`Z`**, and **`T`** (case insensitive).
-* The **`axis`** attribute must be consistent with the coordinate type deduced
-from **`units`** and **`positive`**.
-* The **`axis`** attribute is not allowed for auxiliary coordinate variables.
-* A data variable must not have more than one coordinate variable with a
-particular value of the **`axis`** attribute.
+[horizontal]
+*4.requirement.1*:: The **`axis`** attribute may only be attached to coordinate variables and geometry node coordinate variables (Chapter 7).
+*4.requirement.1*:: The only legal values of axis are **`X`**, **`Y`**, **`Z`**, and **`T`** (case insensitive).
+*4.requirement.2*:: The **`axis`** attribute must be consistent with the coordinate type deduced from **`units`** and **`positive`**.
+*4.requirement.3*:: The **`axis`** attribute is not allowed for auxiliary coordinate variables.
+*4.requirement.4*:: A data variable must not have more than one coordinate variable with a particular value of the **`axis`** attribute.
 
 [[section-11]]
 
@@ -249,12 +248,14 @@ particular value of the **`axis`** attribute.
 
 *Requirements:*
 
-* The only legal values for the **`positive`** attribute are **`up`** or **`down`** (case
+[horizontal]
+*4.3.requirement.1*:: The only legal values for the **`positive`** attribute are **`up`** or **`down`** (case
 insensitive).
 
 *Recommendations:*
 
-* The **`positive`** attribute should be consistent with the sign convention implied by the 
+[horizontal]
+*4.3.recommendation.1*:: The **`positive`** attribute should be consistent with the sign convention implied by the 
 definition of the **`standard_name`**, if both are provided.
 
 [[section-12]]
@@ -264,22 +265,12 @@ definition of the **`standard_name`**, if both are provided.
 
 *Requirements:*
 
-* The **`formula_terms`** attribute is only allowed on a coordinate variable
-which has a **`standard_name`** listed in Appendix C.
-* The type of the **`formula_terms`** attribute is a string whose value is
-list of blank separated word pairs in the form **`term: var`**. The legal
-values **`term`** are contained in Appendix C for each valid **`standard_name`**.
-The values of **`var`** must be variables that exist in the file.
-* Where indicated by the appropriate definition in Appendix D, the **`standard_name`** 
-attributes of variables named by the **`formula_terms`** attribute must be consistent 
-with the **`standard_name`** of the coordinate variable it is attached to, according to 
-the appropriate definition in Appendix D.
-* The **`computed_standard_name`** attribute is only allowed on a coordinate variable 
-which has a **`formula_terms`** attribute.
-* The **`computed_standard_name`** attribute is a string whose value must be consistent 
-with the **`standard_name`** of the coordinate variable it is attached to, and in some cases 
-also with the **`standard_name`** attributes of variables named by the **`formula_terms`** attribute, 
-according to the appropriate definition in Appendix D.
+[horizontal]
+*4.3.3.requirement.1*:: The **`formula_terms`** attribute is only allowed on a coordinate variable which has a **`standard_name`** listed in Appendix C.
+*4.3.3.requirement.2*:: The type of the **`formula_terms`** attribute is a string whose value is list of blank separated word pairs in the form **`term: var`**. The legal values **`term`** are contained in Appendix C for each valid **`standard_name`**. The values of **`var`** must be variables that exist in the file.
+*4.3.3.requirement.3*:: Where indicated by the appropriate definition in Appendix D, the **`standard_name`** attributes of variables named by the **`formula_terms`** attribute must be consistent with the **`standard_name`** of the coordinate variable it is attached to, according to the appropriate definition in Appendix D.
+*4.3.3.requirement.4*:: The **`computed_standard_name`** attribute is only allowed on a coordinate variable which has a **`formula_terms`** attribute.
+*4.3.3.requirement.5*:: The **`computed_standard_name`** attribute is a string whose value must be consistent with the **`standard_name`** of the coordinate variable it is attached to, and in some cases also with the **`standard_name`** attributes of variables named by the **`formula_terms`** attribute, according to the appropriate definition in Appendix D.
 
 
 [[section-13]]
@@ -289,18 +280,17 @@ according to the appropriate definition in Appendix D.
 
 *Requirements:*
 
-* The time units of a time coordinate variable must contain a reference
+[horizontal]
+*4.4.requirement.1*:: The time units of a time coordinate variable must contain a reference
 time.
-* The reference time of a time coordinate variable must be a legal time
+*4.4.requirement.2*:: The reference time of a time coordinate variable must be a legal time
 in the specified calendar.
 
 *Recommendations:*
 
-* The use of a reference time in the year 0 to indicate climatological
-time is deprecated. This restriction only applies to the real-world
-calendar as used by the udunits package.
-* Units of **`year`** and **`month`** and any equivalent units should be used with
-caution.
+[horizontal]
+*4.4.recommendation.1*:: The use of a reference time in the year 0 to indicate climatological time is deprecated. This restriction only applies to the real-world calendar as used by the udunits package.
+*4.4.recommendation.2*:: Units of **`year`** and **`month`** and any equivalent units should be used with caution.
 
 [[section-14]]
 
