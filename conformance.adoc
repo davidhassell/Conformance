@@ -372,11 +372,8 @@ The legal values for the **`grid_mapping_name`** attribute are contained in Appe
 
 *Requirements:*
 
-* A variable of character type that is named by a **`coordinates`** attribute
-is a label variable. This variable must have one or two dimensions. The
-trailing (CDL order) or sole dimension is for the maximum string length.
-If there are two dimensions, leading dimension (CDL order) must match
-one of those of the data variable.
+[horizontal]
+*6.1.requirement.1*:: A variable of character type that is named by a **`coordinates`** attribute is a label variable. This variable must have one or two dimensions. The trailing (CDL order) or sole dimension is for the maximum string length. If there are two dimensions, leading dimension (CDL order) must match one of those of the data variable.
 
 [[section-17]]
 
@@ -385,17 +382,13 @@ one of those of the data variable.
 
 *Requirements:*
 
-* The type of the **`bounds`** attribute is a string whose value is a single
-variable name. The specified variable must exist in the file.
-* A boundary variable must have the same dimensions as its associated
-variable, plus have a trailing dimension (CDL order) for the maximum
-number of vertices in a cell.
-* A boundary variable must be a numeric data type.
-
-*  If a boundary variable has **`units`**,**`standard_name`**, **`axis`**, **`positive`**, **`calendar`**, 
+[horizontal]
+*7.1.requirement.1*:: The type of the **`bounds`** attribute is a string whose value is a single variable name. The specified variable must exist in the file.
+*7.1.requirement.2*:: A boundary variable must have the same dimensions as its associated variable, plus have a trailing dimension (CDL order) for the maximum number of vertices in a cell.
+*7.1.requirement.3*:: A boundary variable must be a numeric data type.
+*7.1.requirement.4*::  If a boundary variable has **`units`**,**`standard_name`**, **`axis`**, **`positive`**, **`calendar`**, 
 **`leap_month`**, **`leap_year`** or **`month_lengths`** attributes, they must agree with those of its associated variable.
-* Starting with version 1.7, a boundary variable must have a **`formula_terms`** attribute when it contains bounds for a parametric 
-vertical coordinate variable that has a **`formula_terms`** attribute. In this case the same terms and named variables must appear in 
+*7.1.requirement.5*:: Starting with version 1.7, a boundary variable must have a **`formula_terms`** attribute when it contains bounds for a parametric vertical coordinate variable that has a **`formula_terms`** attribute. In this case the same terms and named variables must appear in 
 both except for terms that depend on the vertical dimension. For such terms the variable name appearing in the boundary variable's 
 **`formula_terms`** attribute must differ from that found in the **`formula_terms`** attribute of the coordinate variable itself. The boundary 
 variable of the **`formula_terms`** variable must have the same dimensions as the **`formula_terms`** variable, plus a trailing dimension (CDL order) 
@@ -407,11 +400,9 @@ term in **`formula_terms`** attribute of the boundary variable.
 
 *Recommendations:*
 
-* The points specified by a coordinate or auxiliary coordinate variable
-should lie within, or on the boundary, of the cells specified by the
-associated boundary variable.
-* Boundary variables should not have the **`_FillValue`**, **`missing_value`**, **`units`**, **`standard_name`**, **`axis`**, **`positive`**, 
-**`calendar`**, **`leap_month`**, **`leap_year`** or **`month_lengths`** attributes. 
+[horizontal]
+*7.1.recommendation.1*:: The points specified by a coordinate or auxiliary coordinate variable should lie within, or on the boundary, of the cells specified by the associated boundary variable.
+*7.1.recommendation.2*:: Boundary variables should not have the **`_FillValue`**, **`missing_value`**, **`units`**, **`standard_name`**, **`axis`**, **`positive`**, **`calendar`**, **`leap_month`**, **`leap_year`** or **`month_lengths`** attributes. 
 
 
 [[section-18]]
